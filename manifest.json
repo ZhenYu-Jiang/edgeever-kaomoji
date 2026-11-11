@@ -1,0 +1,19 @@
+{
+  "type": "plugin",
+  "id": "com.example.kaomoji",
+  "name": "Kaomoji",
+  "version": "1.0.0",
+  "apiVersion": "2",
+  "settingsUi": "host",
+  "description": "Pick kaomoji and emoji to insert at the cursor.",
+  "locales": {
+    "zh-CN": {
+      "name": "颜文字",
+      "description": "分类的颜文字与 emoji 装饰，点一下插入光标处。"
+    }
+  },
+  "author": "ZhenYu-Jiang",
+  "entry": "./main.js",
+  "platforms": ["web", "desktop"],
+  "permissions": ["editor:write", "ui:commands", "ui:panels", "ui:notices"]
+}
