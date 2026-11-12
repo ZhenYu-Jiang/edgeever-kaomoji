@@ -2,18 +2,18 @@
   "type": "plugin",
   "id": "com.example.kaomoji",
   "name": "Kaomoji",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "apiVersion": "2",
   "settingsUi": "host",
-  "description": "Pick kaomoji and emoji to insert at the cursor.",
+  "description": "Search, favorite and reuse kaomoji and emoji. Insert into notes or copy anywhere.",
   "locales": {
     "zh-CN": {
       "name": "颜文字",
-      "description": "分类的颜文字与 emoji 装饰，点一下插入光标处。"
+      "description": "搜索颜文字与 emoji，收藏常用表情、查看最近使用，一键插入或复制。"
     }
   },
   "author": "ZhenYu-Jiang",
   "entry": "./main.js",
   "platforms": ["web", "desktop"],
-  "permissions": ["editor:write", "ui:commands", "ui:panels", "ui:notices"]
+  "permissions": ["editor:write", "ui:commands", "ui:panels", "ui:notices", "storage"]
 }
