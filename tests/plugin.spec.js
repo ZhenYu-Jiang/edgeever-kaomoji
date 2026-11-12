@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test';
 
-const key = 'kaomoji.preferences.v1';
+const key = 'kaomoji.preferences.v2';
 const happy = '(＾▽＾)';
 async function open(page, query = '') {
   await page.goto('/' + query);
@@ -86,7 +86,7 @@ test('recent list caps at 24 distinct successful inserts and keeps original unic
 
 test('delayed storage load cannot overwrite favorites; malformed entries are filtered', async ({ page }) => {
   await page.addInitScript(({ key, happy }) => localStorage.setItem(key, JSON.stringify({
-    favorites: [happy, happy, 'unknown', null], recent: ['🎂', 'bad'], mode: 'copy',
+    version: 2, favorites: [happy, happy, 'unknown', null], recent: ['🎂', 'bad'], mode: 'copy',
   })), { key, happy });
   await page.goto('/?readDelay=400');
   await expect(page.locator('.km-pick').first()).toBeDisabled();
