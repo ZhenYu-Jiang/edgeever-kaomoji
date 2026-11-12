@@ -45,4 +45,4 @@ npm test
 
 浏览器测试使用隔离的 EdgeEver API 模拟环境，覆盖搜索、收藏持久化、最近使用、复制/插入失败、存储异常和窄屏。它们不读取真实笔记或登录信息，不替代实际宿主中的最终验收。
 
-推送版本标签（如 `1.1.0`）后，GitHub Actions 先运行测试，再生成包含 `manifest.json`、`main.js` 和 `styles.css` 的 Release。标签必须与 manifest 版本一致。
+推送版本标签（如 `1.1.0`）后，GitHub Actions 先运行测试，再生成包含 `manifest.json`、`main.js` 和 `styles.css` 的 Release。标签必须与 manifest 版本一致。主分支测试通过后也会检查尚未发布的版本标签，只有分发文件与标签内容一致才补发；已存在的 Release 不会被覆盖。
